@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# Whole Subversion conversions to Git
 
-You can use the [editor on GitHub](https://github.com/svndump-to-git/svndump-to-git.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+The svndump-to-git-converter is a Java Spring based application useful for converting everything from large subversion repositories into git repositories.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It implements automatic branch detection logic with extension points for project specific.
 
-### Markdown
+Other conversion solutions exist but they are either not-native (The Perl based git-svn) or require you to know exactly which part of the repository you want to convert (svn2git as used by the KDE project).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The svndump-to-git-converter will convert the entire repository and then it can be sliced up into sensible parts going forward.  
 
-```markdown
-Syntax highlighted code block
+Post conversion you will want to identify giant binary files and consider removing them from the repository.  For example if you plan on uploading the converted repository into github then you will need to make sure that no file is larger than 100 MB.
 
-# Header 1
-## Header 2
-### Header 3
+The converter works by reading in subversion dump files (in the version 2 format) and writing the corresponding files into a bare git repository.  Branch detection will automatically split the overall path to a file in a branch part and tree part.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/svndump-to-git/svndump-to-git.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
