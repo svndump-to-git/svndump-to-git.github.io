@@ -1,6 +1,6 @@
 # Whole Subversion conversions to Git
 
-The [svndump-to-git-converter](https://github.com/svndump-to-git/svndump-to-git-converter) is a Java application useful for converting an entire subversion repository into a git repository with automatic branch detection.
+The [svndump-to-git/converter](https://github.com/svndump-to-git/converter) is a Java application useful for converting an entire subversion repository into a git repository with automatic branch detection.
 
 Using spring profiles branch detection plugins can be written to override the defalt branch detection logic in certain cases.
 
