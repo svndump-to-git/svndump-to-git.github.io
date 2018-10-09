@@ -90,7 +90,7 @@ $ java -jar git-importer.jar
 
 ```
 
-|| Option || Description ||
+| *Option* | *Description* |
 | SVN Dumpfile | The bzip2 dump file.  Note: a repo can be imported by running the importer on several dump files but they have to be applied in order and the importer assumes you know what you are doing in this regard. |
 | Git Repository | The initialized bare git repository that the svndump file contents will be imported into. |
 | veto.log | not used but needs to be in the command line.  just use veto.log |
